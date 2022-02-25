@@ -1,0 +1,2 @@
+class Motor < ApplicationRecord
+end
