@@ -27,8 +27,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_25_212223) do
     t.bigint "user_id", null: false
     t.string "city"
     t.date "date"
+    t.bigint "motor_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["motor_id"], name: "index_reservations_on_motor_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
@@ -38,5 +40,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_25_212223) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "reservations", "motors"
   add_foreign_key "reservations", "users"
 end
