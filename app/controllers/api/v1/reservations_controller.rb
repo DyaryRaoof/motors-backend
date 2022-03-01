@@ -7,7 +7,9 @@ class Api::V1::ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
+      MotorReservation.create(motor_id: params[:motor_id], reservation_id: @reservation.id)
       render json: @reservation, status: :created
+
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end

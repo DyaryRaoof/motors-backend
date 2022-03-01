@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_01_073441) do
   create_table "reservations", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "city"
-    t.string "date"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_reservations_on_user_id"
