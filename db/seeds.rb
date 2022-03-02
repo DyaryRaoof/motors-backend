@@ -1,3 +1,7 @@
 Motor.create!(name: "Motor 1", description: "Motor 1 description, motor description, motor description", price: "100.00", image: "https://i.ibb.co/JygvmW1/motor1.png")
 Motor.create!(name: "Motor 2", description: "Motor 2 description, motor description, motor description", price: "100.00", image: "https://i.ibb.co/SQYQ7cX/motor2.png")
 Motor.create!(name: "Motor 3", description: "Motor 3 description, motor description, motor description", price: "100.00", image: "https://i.ibb.co/86xCKK2/motor3.png")
+Motor.create!(name: "Motor 4", description: "Motor 4 description, motor description, motor description", price: "100.00", image: "https://i.ibb.co/86xCKK2/motor1.png")
+Motor.create!(name: "Motor 5", description: "Motor 5 description, motor description, motor description", price: "100.00", image: "https://i.ibb.co/SQYQ7cX/motor2.png")
+Motor.create!(name: "Motor 6", description: "Motor 6 description, motor description, motor description", price: "100.00", image: "https://i.ibb.co/86xCKK2/motor3.png")
+Motor.create!(name: "Motor 7", description: "Motor 7 description, motor description, motor description", price: "100.00", image: "https://i.ibb.co/JygvmW1/motor1.png")
