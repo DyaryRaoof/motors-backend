@@ -1,9 +1,7 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
     @reservation = Reservation.all.map do |reserved|
-      [reserved, { motor: reserved.motors.all.map do |motor|
-        motor.name
-      end }]
+      [reserved, { motor: reserved.motors.all.map(&:name) }]
     end
     render json: @reservation
   end
