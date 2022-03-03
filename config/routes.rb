@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       get '/motors', to: 'motors#index'
       get '/motors/:id', to: 'motors#show'
       post '/motors/create', to: 'motors#create'
-      delete '/motor/:id/destroy', to: 'motors#destroy'
+      delete '/motors/:id/destroy', to: 'motors#destroy'
       post '/reservations', to: 'reservations#create'
       get '/reservations', to: 'reservations#index'
     end
