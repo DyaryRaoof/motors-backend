@@ -20,6 +20,6 @@ class Api::V1::MotorsController < ApplicationController
 
   def destroy
     Motor.find(params[:id]).destroy
-    render  json: { message: "removed" }
+    render json: { message: 'removed' }
   end
 end
