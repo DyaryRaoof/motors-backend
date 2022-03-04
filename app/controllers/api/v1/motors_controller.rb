@@ -17,4 +17,9 @@ class Api::V1::MotorsController < ApplicationController
       render json: { error: motor.errors, user: motor }, status: :error
     end
   end
+
+  def destroy
+    Motor.find(params[:id]).destroy
+    render json: { message: 'removed' }
+  end
 end
