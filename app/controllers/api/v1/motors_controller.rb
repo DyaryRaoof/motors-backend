@@ -19,7 +19,12 @@ class Api::V1::MotorsController < ApplicationController
   end
 
   def destroy
+    motor_reservation = MotorReservation.find_by(motor_id: params[:id])
+    reservation = Reservation.find_by(motor_id: params[:id])
+    motor_reservation&.destroy
+    reservation&.destroy
     Motor.find(params[:id]).destroy
+
     render json: { message: 'removed' }
   end
 end
