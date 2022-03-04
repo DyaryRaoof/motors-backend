@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_25_212223) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_01_073441) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "motor_reservations", force: :cascade do |t|
+    t.bigint "motor_id", null: false
+    t.bigint "reservation_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["motor_id"], name: "index_motor_reservations_on_motor_id"
+    t.index ["reservation_id"], name: "index_motor_reservations_on_reservation_id"
+  end
 
   create_table "motors", force: :cascade do |t|
     t.string "name"
@@ -27,10 +36,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_25_212223) do
     t.bigint "user_id", null: false
     t.string "city"
     t.date "date"
-    t.bigint "motor_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["motor_id"], name: "index_reservations_on_motor_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
@@ -40,6 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_25_212223) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "reservations", "motors"
+  add_foreign_key "motor_reservations", "motors"
+  add_foreign_key "motor_reservations", "reservations"
   add_foreign_key "reservations", "users"
 end
