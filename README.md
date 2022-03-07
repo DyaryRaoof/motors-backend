@@ -7,6 +7,7 @@ This is a  Ruby on Rails final capstone project from Microverse curriculum. This
 
 - Ruby on Rails
 - PostgreSQL as a databaase
+_ Rspec
 
 ## Live Demo
 https://motors-backend-d-p-m.herokuapp.com/
@@ -27,6 +28,7 @@ Download the ZIP from this [Link](https://github.com/DyaryRaoof/motors-backend),
 - Install the required dependecies with `bundle install`
 - run `db:migrate`
 - rub `db:seed`
+- run `rspec to run the tests`
 - run `rail s -p 3001` to have the app up and running
 
 ## Authors
