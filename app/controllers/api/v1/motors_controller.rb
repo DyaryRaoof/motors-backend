@@ -25,13 +25,8 @@ class Api::V1::MotorsController < ApplicationController
     motor_reservations.each do |motor_reservation|
       motor_reservation.destroy
       reservations = Reservation.where(id: motor_reservation.reservation_id)
-      reservations.each do |reservation|
-        reservation.destroy
-      end
+      reservations.each(&:destroy)
     end
-
-
-
 
     Motor.find(params[:id]).destroy
 
