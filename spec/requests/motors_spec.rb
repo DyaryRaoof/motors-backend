@@ -15,6 +15,16 @@ RSpec.describe 'motors', type: :request do
     end
   end
 
+  describe 'GET /motors' do
+    before(:all) do
+      Rails.application.load_seed
+    end
+    before(:example) { get '/api/v1/motors/1' }
+    it 'works! returns correct status code' do
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
   describe 'POST /motors' do
     before(:example) do
       post '/api/v1/motors/create', params: { name: 'Motor 10', description: 'this is a motor', price: 1000,
