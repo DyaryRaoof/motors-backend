@@ -14,10 +14,12 @@ RSpec.describe 'motors', type: :request do
       expect(response.body).to include 'Motor 1'
     end
   end
-  
+
   describe 'POST /motors' do
-    before(:example) { post '/api/v1/motors/create', params: { :name => 'Motor 10', :description => 'this is a motor', :price => 1000,
-                                 :image => 'https://i.ibb.co/JygvmW1/motor1.png' } }
+    before(:example) do
+      post '/api/v1/motors/create', params: { name: 'Motor 10', description: 'this is a motor', price: 1000,
+                                              image: 'https://i.ibb.co/JygvmW1/motor1.png' }
+    end
     it 'works! returns correct status code' do
       expect(response).to have_http_status(:created)
     end
@@ -32,5 +34,4 @@ RSpec.describe 'motors', type: :request do
       expect(response).to have_http_status(:ok)
     end
   end
-
 end
