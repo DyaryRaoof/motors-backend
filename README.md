@@ -19,6 +19,15 @@ https://github.com/DyaryRaoof/motors-frontend
 ## Documentation For API
 https://documenter.getpostman.com/view/14510825/UVkvJYGR
 
+## Kanban Board 
+https://github.com/DyaryRaoof/motors-backend/projects/1
+
+## Initial Kanban board
+https://user-images.githubusercontent.com/40565209/155349728-cee9390b-f5f0-45ff-a617-14c4e15e5cf0.png
+
+## Team members 
+  3 people 
+
 ## Getting Started
 
 Download the ZIP from this [Link](https://github.com/DyaryRaoof/motors-backend), or run the following git command to clone the files to your machine:
