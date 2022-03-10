@@ -18,5 +18,12 @@ module MotorsBackend
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'https://motors-frontend-d-p-m.herokuapp.com'
+        # origins 'http://localhost:3000'
+        resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete]
+      end
+    end
   end
 end
